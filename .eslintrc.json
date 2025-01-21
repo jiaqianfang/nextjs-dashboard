@@ -1,6 +1,15 @@
 {
-  "extends": [
-    // "next/core-web-vitals",
-    // "next/typescript"
+  "extends": "next/core-web-vitals",
+  "rules": {
+    "no-console": "off", // Disable the "no-console" rule globally
+    "react/no-unescaped-entities": "off" // Disable "no-unescaped-entities" rule globally
+  },
+  "overrides": [
+    {
+      "files": ["*.js", "*.jsx"], // Apply these settings to specific file types
+      "rules": {
+        "no-alert": "off" // Disable "no-alert" only for JS/JSX files
+      }
+    }
   ]
 }
